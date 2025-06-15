@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="914.0" style="-fx-background-color: #05005E;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filtering.Controller.MainController">
+
+    <children>
+        <!-- Label Judul -->
+        <Label fx:id="label" layoutX="35.0" layoutY="34.0" prefHeight="30.0" prefWidth="300.0" text="FILTERING DATA" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="25.0" />
+            </font>
+        </Label>
+
+        <!-- Filter Inputs -->
+        <TextField fx:id="FJudul" layoutX="264.0" layoutY="82.0" prefHeight="26.0" prefWidth="202.0" promptText="Judul Buku" style="-fx-background-color: white; -fx-border-color: #dcdde1; -fx-border-radius: 5; -fx-background-radius: 5;" />
+      <ComboBox fx:id="FSorting" layoutX="634.0" layoutY="117.0" prefHeight="26.0" prefWidth="202.0" promptText="Urutkan Berdasarkan" style="-fx-background-color: white; -fx-border-color: #dcdde1; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <ComboBox fx:id="FKategori" layoutX="264.0" layoutY="118.0" prefHeight="26.0" prefWidth="202.0" promptText="Kategori Buku" style="-fx-background-color: white; -fx-border-color: #dcdde1; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <DatePicker fx:id="DateDari" layoutX="35.0" layoutY="82.0" prefHeight="26.0" prefWidth="215.0" promptText="Dari Tahun Pengadaan" style="-fx-background-color: white; -fx-border-color: #dcdde1; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <DatePicker fx:id="DateSampai" layoutX="35.0" layoutY="118.0" prefHeight="26.0" prefWidth="215.0" promptText="Sampai Tahun Pengadaan" style="-fx-background-color: white; -fx-border-color: #dcdde1; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <!-- Tombol -->
+        <Button fx:id="BtnClear" layoutX="486.0" layoutY="82.0" onAction="#handleButtonClear" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #e84118; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Clear" />
+
+        <Button fx:id="BtnFilter" layoutX="486.0" layoutY="118.0" onAction="#handleButtonFilter" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #0097e6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Filter" />
+
+        <!-- Tabel -->
+        <TableView fx:id="tabel" layoutX="34.0" layoutY="170.0" prefHeight="475.0" prefWidth="837.0" style="-fx-background-color: white; -fx-border-color: #dcdde1; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="CKodeBuku" prefWidth="100" text="KODE BUKU" />
+                <TableColumn fx:id="kategori" prefWidth="100" text="KATEGORI" />
+                <TableColumn fx:id="CJudul" prefWidth="150" text="JUDUL" />
+                <TableColumn fx:id="CPengarang" prefWidth="120" text="PENGARANG" />
+                <TableColumn fx:id="CPenerbit" prefWidth="120" text="PENERBIT" />
+                <TableColumn fx:id="CTahun" prefWidth="100" text="TAHUN TERBIT" />
+                <TableColumn fx:id="CEdisi" prefWidth="70" text="EDISI" />
+                <TableColumn fx:id="tahun_pengadaan" prefWidth="150" text="TAHUN PENGADAAN" />
+            </columns>
+        </TableView>
+      <Button fx:id="BtnSorting" layoutX="709.0" layoutY="82.0" onAction="#handleButtonSorting" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #0097e6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Sorting" />
+    </children>
+</AnchorPane>
